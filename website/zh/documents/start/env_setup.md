@@ -29,7 +29,7 @@ BitSail使用`bitsail-shaded-hive`模块来管理hive依赖，在其中使用**3
 
 ### 打包&产物结构
 
-- 运行此脚本在编译时将Flink嵌入到BitSail的包中。`bash build.sh`。如果Flink已经在你们的集群中提供，则可以打包时只包含BitSail相关代码 `mvn clean package -pl bitsail-dist -am -Dmaven.test.skip=true`
+- 运行此脚本在编译时将Flink嵌入到BitSail的包中。`bash build.sh`。如果Flink已经在你们的集群中提供，则可以打包时只包含BitSail相关代码 `mvn clean package -P <profile-id> -pl bitsail-dist -am -Dmaven.test.skip=true`
 
 完成打包后，输出的文件在此目录下`bitsail-dist/target/`.
 
@@ -64,15 +64,15 @@ bitsail-archive-${version}-SNAPSHOT
 
 ```java
 public class KafkaSourceITCase {
-  // ...
-
-  @Test
-  public void testKafkaSource() throws Exception {
-    BitSailConfiguration configuration = JobConfUtils.fromClasspath("kafka_to_print.json");
-    updateConfiguration(configuration);
-    EmbeddedFlinkCluster.submitJob(configuration);
-  }
-  
-  // ...
+    // ...
+    
+    @Test
+    public void testKafkaSource() throws Exception {
+        BitSailConfiguration configuration = JobConfUtils.fromClasspath("kafka_to_print.json");
+        updateConfiguration(configuration);
+        EmbeddedFlinkCluster.submitJob(configuration);
+    }
+    
+    // ...
 }
 ```

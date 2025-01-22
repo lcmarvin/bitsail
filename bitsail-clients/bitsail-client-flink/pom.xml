@@ -16,23 +16,25 @@
   -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>bitsail-clients</artifactId>
         <groupId>com.bytedance.bitsail</groupId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    
     <artifactId>bitsail-client-flink</artifactId>
     <packaging>pom</packaging>
-
+    
     <modules>
         <module>bitsail-client-flink-base</module>
         <module>bitsail-client-flink-1.11</module>
+        <module>bitsail-client-flink-1.16</module>
+        <module>bitsail-client-flink-1.16</module>
     </modules>
-
+    
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -41,7 +43,7 @@
                 <version>${revision}</version>
                 <scope>provided</scope>
             </dependency>
-
+            
             <dependency>
                 <groupId>com.bytedance.bitsail</groupId>
                 <artifactId>bitsail-common</artifactId>
@@ -50,7 +52,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+    
     <build>
         <plugins>
             <plugin>

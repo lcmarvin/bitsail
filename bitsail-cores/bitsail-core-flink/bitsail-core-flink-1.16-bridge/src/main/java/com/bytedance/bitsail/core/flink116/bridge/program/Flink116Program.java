@@ -22,19 +22,19 @@ import com.bytedance.bitsail.core.api.program.factory.ProgramDAGBuilderFactory;
 import com.bytedance.bitsail.flink.core.execution.FlinkExecutionEnviron;
 
 public class Flink116Program extends UnifiedProgram {
-
+  
   @Override
   public ProgramDAGBuilderFactory createProgramBuilderFactory() {
     return new FlinkDAGBuilderFactory();
   }
-
+  
   @Override
   public ExecutionEnviron createExecutionEnviron() {
     return new FlinkExecutionEnviron();
   }
-
+  
   @Override
   public String getComponentName() {
-    return "flink-1.16";
+    return "flink";
   }
 }
