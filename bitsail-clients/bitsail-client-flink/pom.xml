@@ -32,7 +32,6 @@
         <module>bitsail-client-flink-base</module>
         <module>bitsail-client-flink-1.11</module>
         <module>bitsail-client-flink-1.16</module>
-        <module>bitsail-client-flink-1.16</module>
     </modules>
     
     <dependencyManagement>
